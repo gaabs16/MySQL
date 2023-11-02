@@ -25,11 +25,11 @@ endereco_autor varchar(50),
 pais_origem varchar(50)
 );
 
-/ADD COLUNA/
+/*ADD COLUNA*/
 alter table tb_livro add column fk_id_editora int;
 alter table tb_livro add column fk_id_autor int;
 
-/ADD CHAVE PRIMARIA/
+/*ADD CHAVE PRIMARIA*/
 alter table tb_livro add constraint fk_id_autor foreign key (fk_id_autor) references tb_autor(pk_id_autor);
 alter table tb_livro add constraint fk_id_editora foreign key (fk_id_editora) references tb_editora(pk_id_editora);
 
@@ -75,7 +75,6 @@ insert into tb_autor
 ('Eça de Queiros', 'bahia', 'brasil'),
 ('Pepetela', 'sao paulo', 'brasil');
 
-
 describe tb_editora;
 select * from tb_editora;
 
@@ -96,7 +95,6 @@ insert into tb_editora
 ('Jose Olympio', '(11)9111-111', 'rua lapa tito, 54'),
 ('Typographia', '(11)9111-111', 'rua lapa tito, 54'),
 ('Leya', '(11)9111-111', 'rua lapa tito, 54');
-
 
 describe tb_livro;
 select * from tb_livro;
